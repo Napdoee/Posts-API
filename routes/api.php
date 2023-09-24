@@ -37,3 +37,7 @@ Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 
 Route::post('/login', [AuthenticationController::class, 'login']);
+
+Route::get('/', function() {
+    return response()->json(['message' => 'API By Napdoee']);
+});
